@@ -10,6 +10,7 @@ services:
       - VECTOR_DB_HOST=vector-db
       - VECTOR_DB_PORT=8080
       - GROQ_API_KEY=${GROQ_API_KEY}
+      - WEAVIATE_URL=${WEAVIATE_URL}
     depends_on:
       - vector-db
 
