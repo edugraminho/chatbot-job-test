@@ -17,11 +17,10 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-chain = prompt | llm
-
 
 def get_response(user_input):
-    response = chain.invoke({"input": user_input})
+    formatted_input = prompt.format(input=user_input)
+    response = llm.invoke(formatted_input)
     return response.content
 
 
