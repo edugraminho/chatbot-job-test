@@ -1,19 +1,18 @@
 import os
 import streamlit as st
-from langchain_groq import ChatGroq
+from llm import llm
 from langchain_core.prompts import ChatPromptTemplate
-
-llm = ChatGroq(
-    model="llama-3.1-70b-versatile",
-    temperature=0,
-    max_tokens=None,
-    timeout=None,
-    max_retries=2,
+from vector_db import (
+    store_response,
+    setup_weaviate_schema,
 )
 
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "Você é um assistente útil que responde perguntas com clareza."),
+        (
+            "system",
+            "Você é um assistente útil que responde perguntas com clareza.",
+        ),
         ("human", "{input}"),
     ]
 )
@@ -31,8 +30,10 @@ def main():
     user_input = st.text_input("Você: ", "")
     if user_input:
         response = get_response(user_input)
+        store_response(user_input, response)
         st.write("Bot:", response)
 
 
 if __name__ == "__main__":
+    setup_weaviate_schema()
     main()
