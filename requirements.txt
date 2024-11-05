@@ -1,0 +1,9 @@
+﻿groq
+langchain==0.3.7
+langchain-groq
+streamlit==1.39.0
+python-dotenv==1.0.1
+requests==2.32.3
+protobuf==3.20.3
+langgraph==0.2.44
+chromadb==0.5.17
