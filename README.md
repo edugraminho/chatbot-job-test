@@ -4,15 +4,15 @@
 Este projeto é um chatbot interativo que utiliza um modelo de linguagem (LLM) para responder a perguntas dos usuários e verificar a veracidade das informações fornecidas. O chatbot armazena respostas consideradas verdadeiras em um banco de dados Weaviate.
 
 ## Tecnologias Usadas
-**- Streamlit**: Para a interface do usuário.
+[**- Streamlit**](https://docs.streamlit.io/develop): Para a interface do usuário.
 
-**- LangGraph**: Para manipulação e estruturação de dados.
+[**- LangGraph**](https://langchain-ai.github.io/langgraph/tutorials/introduction/): Para manipulação e estruturação de dados.
 
-**- LangChain**: Para integração com modelos de linguagem.
+[**- LangChain**](https://python.langchain.com/docs/tutorials/): Para integração com modelos de ]linguagem.
 
-**- Groq (Meta - LLaMA-3.1-70B Versatile)**: Modelo de linguagem utilizado para gerar respostas e verificar a veracidade de afirmações.
+[**- Groq (Meta - LLaMA-3.1-70B Versatile)**](https://console.groq.com/docs/overview): Modelo de linguagem utilizado para gerar respostas e verificar a veracidade de afirmações.
 
-**- Weaviate**: Banco de dados de vetores para armazenar respostas verificadas.
+[**- Weaviate**](https://weaviate.io/developers/weaviate): Banco de dados de vetores para armazenar respostas verificadas.
 
 
 ## Requisitos Necessários
